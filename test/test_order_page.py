@@ -3,9 +3,9 @@ from pages.main_page import MainPage
 from pages.order_page import OrderPages
 import allure
 
-@allure.title('Проверка заказа самоката при нажатии на кнопку "Заказать сверху страницы и в середине страницы"')
-class TestOrderPage:
 
+class TestOrderPage:
+    @allure.title('Проверка заказа самоката при нажатии на кнопку "Заказать" сверху страницы')
     def test_order_button_at_the_top_of_the_screen(self,driver):
         main_page = MainPage(driver)
         order_page = OrderPages(driver)
@@ -25,7 +25,7 @@ class TestOrderPage:
         order_page.set_order_click_yes()
         assert order_page.set_status() =='Посмотреть статус'
 
-
+    @allure.title('Проверка заказа самоката при нажатии на кнопку "Заказать в середине страницы"')
     def test_order_button_in_the_middle_of_the_screen(self,driver):
         main_page = MainPage(driver)
         order_page = OrderPages(driver)

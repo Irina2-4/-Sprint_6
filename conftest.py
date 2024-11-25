@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from helpers.data import Urls
+from helpers.Urls import Urls
 
 @pytest.fixture(scope = 'function')
 def driver():

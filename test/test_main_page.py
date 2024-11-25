@@ -4,8 +4,9 @@ from conftest import driver
 from helpers.data import Question
 import allure
 
-@allure.title('Проверка правильности отображения выпадающего списка в разделе "Вопросы о важном"')
+
 class TestMainPage:
+    @allure.title('Проверка правильности отображения выпадающего списка в разделе "Вопросы о важном"')
     @pytest.mark.parametrize('num,result', Question.answer)
 
     def test_question_and_answers(self,driver,num,result):
